@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { render } from 'react-dom'
 import 'semantic-ui-css/semantic.min.css'
+import 'pokemon'
 import { Input, Button, Container } from 'semantic-ui-react'
 
 class PokemonSearch extends Component {
@@ -43,7 +44,12 @@ class PokemonSearch extends Component {
         {fetched && (
           <div>
             <div>
-              <strong>[{pokemon.id}]</strong> <strong>{pokemon.name}</strong>
+              <strong>[{pokemon.id}]</strong>
+              <strong>{pokemon.name}</strong>
+            </div>
+            <div>
+              <img src={pokemon.sprites.front_default} />
+              <img src={pokemon.sprites.back_default} />
             </div>
           </div>
         )}
